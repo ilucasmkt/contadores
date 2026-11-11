@@ -649,21 +649,21 @@
 
   <!-- Pop-up de upsell: ao clicar no Plano Básico, oferece o Acesso Completo com desconto -->
   <style>
-    .upsell-overlay{position:fixed;inset:0;background:rgba(6,44,30,.72);display:none;align-items:center;justify-content:center;padding:16px;z-index:9999}
+    .upsell-overlay{position:fixed;inset:0;background:rgba(11,31,68,.72);display:none;align-items:center;justify-content:center;padding:16px;z-index:9999}
     .upsell-overlay.open{display:flex}
     .upsell-box{position:relative;background:#fff;border-radius:20px;max-width:440px;width:100%;padding:28px 22px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.35);font-family:var(--font-body);animation:upsellIn .25s ease-out}
     @keyframes upsellIn{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
     .upsell-close{position:absolute;top:10px;right:14px;background:none;border:0;font-size:26px;line-height:1;color:#64748b;cursor:pointer}
     .upsell-img{display:block;width:auto;max-width:150px;max-height:150px;margin:0 auto 10px}
-    .upsell-tag{display:inline-block;background:#ECFDF5;color:#047857;font-family:var(--font-display);font-weight:800;font-size:.78rem;padding:6px 12px;border-radius:9999px;margin-bottom:12px}
-    .upsell-box h3{font-family:var(--font-display);font-size:1.35rem;font-weight:900;color:#062C1E;margin:0 0 8px}
+    .upsell-tag{display:inline-block;background:#EFF6FF;color:#1D4ED8;font-family:var(--font-display);font-weight:800;font-size:.78rem;padding:6px 12px;border-radius:9999px;margin-bottom:12px}
+    .upsell-box h3{font-family:var(--font-display);font-size:1.35rem;font-weight:900;color:#0B1F44;margin:0 0 8px}
     .upsell-box p{color:#475569;font-size:.98rem;margin:0 0 14px}
     .upsell-list{list-style:none;padding:0;margin:0 0 14px;text-align:left;font-size:.95rem;color:#0F172A}
     .upsell-list li{padding:4px 0 4px 26px;position:relative}
-    .upsell-list li:before{content:"✓";position:absolute;left:4px;color:#059669;font-weight:900}
+    .upsell-list li:before{content:"✓";position:absolute;left:4px;color:#2563EB;font-weight:900}
     .upsell-price{margin:6px 0 16px;font-family:var(--font-display)}
     .upsell-price s{color:#94a3b8;font-size:1.05rem;margin-right:8px}
-    .upsell-price strong{font-size:2.1rem;font-weight:900;color:#059669}
+    .upsell-price strong{font-size:2.1rem;font-weight:900;color:#2563EB}
     .upsell-yes{display:block;width:100%;background:#059669;color:#fff;border:0;border-radius:12px;padding:16px;font-family:var(--font-display);font-weight:900;font-size:1.05rem;cursor:pointer;box-shadow:0 5px 15px rgba(5,150,105,.4)}
     .upsell-yes:hover{background:#047857}
     .upsell-no{display:block;width:100%;background:none;border:0;color:#64748b;font-size:.88rem;margin-top:12px;cursor:pointer;text-decoration:underline}
