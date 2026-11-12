@@ -79,7 +79,7 @@
       var queryParams = window.location.search;
       if (!queryParams || queryParams.length <= 1) return;
       var params = new URLSearchParams(queryParams);
-      var links = document.querySelectorAll('a[href*="pay.hotmart.com"], a[href*="pay.kiwify.com"]');
+      var links = document.querySelectorAll('a[href*="pay.hotmart.com"], a[href*="pay.kiwify.com"], a[href*="pay.cakto.com.br"]');
       links.forEach(function(link) {
         try {
           var url = new URL(link.href);
@@ -600,7 +600,8 @@
       if (!basicBtn || !overlay) return;
       function open() { overlay.classList.add('open'); }
       function close() { overlay.classList.remove('open'); }
-      function go(url) { close(); window.open(url, '_blank', 'noopener'); }
+      function withParams(url) { try { var u = new URL(url, location.href); new URLSearchParams(location.search).forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); }); return u.toString(); } catch (e) { return url; } }
+      function go(url) { close(); window.open(withParams(url), '_blank', 'noopener'); }
       basicBtn.addEventListener('click', function (e) { e.preventDefault(); open(); });
       document.getElementById('upsellYes').addEventListener('click', function () { go(UPSELL_URL); });
       document.getElementById('upsellNo').addEventListener('click', function () { go(basicBtn.href); });
