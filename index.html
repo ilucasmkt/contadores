@@ -18,6 +18,14 @@
       max-width: 175px !important;
     }
 
+    /* Prints reais de clientes (depoimentos) */
+    .dep-marquee-prints{margin-top:8px}
+    .dep-prints-track{align-items:flex-start;width:max-content;animation:depPrintsLoop 55s linear infinite}
+    .dep-marquee-prints:hover .dep-prints-track{animation-play-state:paused}
+    .dep-print{width:260px;flex-shrink:0;border-radius:14px;overflow:hidden;border:1px solid var(--border-color);box-shadow:0 8px 20px rgba(37,99,235,0.10);background:#0b141a}
+    .dep-print img{display:block;width:100%;height:auto}
+    @keyframes depPrintsLoop{from{transform:translateX(0)}to{transform:translateX(calc(-1 * 8 * (260px + 20px)))}}
+    @media (prefers-reduced-motion:reduce){.dep-prints-track{animation:none;overflow-x:auto}}
     /* Carousel Larger Image Sizes */
     .marquee-item, .learn-marquee-item {
       width: 560px !important;
@@ -510,6 +518,28 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="dep-marquee dep-marquee-prints">
+        <div class="dep-marquee-track dep-prints-track">
+          <div class="dep-print"><img src="assets/img/depoimento-camila.webp" alt="Conversa de WhatsApp com Camila sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-renata.webp" alt="Conversa de WhatsApp com Renata sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-beatriz.webp" alt="Conversa de WhatsApp com Beatriz sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-julia.webp" alt="Conversa de WhatsApp com Júlia sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-diego.webp" alt="Conversa de WhatsApp com Diego sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-bruno.webp" alt="Conversa de WhatsApp com Bruno sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-marcelo.webp" alt="Conversa de WhatsApp com Marcelo sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <div class="dep-print"><img src="assets/img/depoimento-andre.webp" alt="Conversa de WhatsApp com André sobre o uso dos mapas mentais" loading="lazy" decoding="async"></div>
+          <!-- DUPLICATE FOR SEAMLESS LOOP -->
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-camila.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-renata.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-beatriz.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-julia.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-diego.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-bruno.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-marcelo.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="dep-print" aria-hidden="true"><img src="assets/img/depoimento-andre.webp" alt="" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </div>
