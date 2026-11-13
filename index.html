@@ -610,5 +610,19 @@
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
     })();
   </script>
+<script>
+/* Protecao basica: bloqueia botao direito, atalhos de copiar/inspecionar e arrastar imagens */
+(function(){
+  var ok=function(e){var t=e.target&&e.target.tagName;return t==="INPUT"||t==="TEXTAREA";};
+  document.addEventListener("contextmenu",function(e){e.preventDefault();});
+  document.addEventListener("dragstart",function(e){e.preventDefault();});
+  document.addEventListener("selectstart",function(e){if(!ok(e))e.preventDefault();});
+  document.addEventListener("copy",function(e){if(!ok(e))e.preventDefault();});
+  document.addEventListener("keydown",function(e){
+    var k=(e.key||"").toLowerCase(),c=e.ctrlKey||e.metaKey;
+    if(e.key==="F12"||(c&&e.shiftKey&&["i","j","c"].indexOf(k)>-1)||(c&&["u","s"].indexOf(k)>-1)){e.preventDefault();}
+  });
+})();
+</script>
 </body>
 </html>
