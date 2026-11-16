@@ -113,48 +113,10 @@
     
     <div class="hero-inner">
       <p class="kicker">🎉 Obrigado pela sua compra! Seu pagamento foi aprovado</p>
-      <h1>Leve mais <span class="hl" style="white-space: nowrap;">100 Questões</span><br><span class="hl" style="white-space: nowrap;">Comentadas</span> de Contabilidade<br>com uma oferta única</h1>
+      <h1>Treine com <span class="hl" style="white-space: nowrap;">100 Questões</span><br>Comentadas de Contabilidade<br>por apenas <span class="hl" style="white-space: nowrap;">R$ 14,90</span></h1>
       
-      <div class="hero-img-no-card">
-        <img src="/assets/img/questoes-100-mockup.webp" alt="100 Questões Comentadas de Contabilidade" width="640" height="640" fetchpriority="high">
-      </div>
-
-      <cakto-upsell-buttons>
-        <cakto-upsell-accept
-          bg-color="#0f7865"
-          text-color="#ffffff"
-          upsell-accept-url="members_area"
-          offer-id="ndgt5bj"
-          app-base-url="https://app.cakto.com.br"
-          offer-type="upsell"
-          upsell-reject-url="members_area"
-        >
-          QUERO GARANTIR ESSA OFERTA ÚNICA
-        </cakto-upsell-accept>
-        <cakto-upsell-reject
-          upsell-reject-url="members_area"
-        >
-          Não, eu não quero aproveitar a oferta
-        </cakto-upsell-reject>
-      </cakto-upsell-buttons>
-
-      <div class="social-proof">
-        <span>Para estudantes, concursandos e profissionais da contabilidade</span>
-      </div>
-      <p class="trust-row">🔒 Compra 100% segura · 7 dias de garantia · Acesso imediato</p>
-    </div>
-  </header>
-
-  <!-- ============ MARQUEE (MATERIAL POR DENTRO) ============ -->
-  <section class="section section-material section-blue-clean">
-    <div class="container">
-      <div class="material-head">
-        <span class="material-eyebrow">🟢 PRÉVIA DAS QUESTÕES</span>
-        <h2 class="section-title">Veja as questões <span class="hl">por dentro</span></h2>
-        <p class="section-sub">Cada questão tem <strong>4 alternativas</strong>, <strong>gabarito comentado</strong> e o <strong>passo a passo</strong> das contas para você <strong>entender o raciocínio</strong>.</p>
-      </div>
-
-      <div class="marquee">
+      <div class="hero-img-no-card" style="display:block;width:100%;max-width:none;position:relative;left:0;margin:0 0 16px;padding:0">
+        <div class="marquee" style="left:0;right:auto;width:100%;margin:0;padding:6px 0">
         <div class="marquee-track">
           <div class="marquee-item"><img loading="lazy" decoding="async" src="/assets/img/qi-01.webp" alt="Capa das 100 Questões Comentadas"></div>
           <div class="marquee-item"><img loading="lazy" decoding="async" src="/assets/img/qi-02.webp" alt="Fórmulas-chave para revisar rápido"></div>
@@ -178,15 +140,11 @@
           <div class="marquee-item" aria-hidden="true"><img loading="lazy" decoding="async" src="/assets/img/qi-09.webp" alt="Gabarito comentado explicando cada resposta"></div>
         </div>
       </div>
-    </div>
-  </section>
+      </div>
 
-  <!-- ============ CTA FINAL ============ -->
-  <section class="section" style="padding-top:8px;padding-bottom:36px">
-    <div class="container narrow center">
       <cakto-upsell-buttons>
         <cakto-upsell-accept
-          bg-color="#0f7865"
+          bg-color="#2563EB"
           text-color="#ffffff"
           upsell-accept-url="members_area"
           offer-id="ndgt5bj"
@@ -202,9 +160,13 @@
           Não, eu não quero aproveitar a oferta
         </cakto-upsell-reject>
       </cakto-upsell-buttons>
+
+      <div class="social-proof">
+        <span>Para estudantes, concursandos e profissionais da contabilidade</span>
+      </div>
       <p class="trust-row">🔒 Compra 100% segura · 7 dias de garantia · Acesso imediato</p>
     </div>
-  </section>
+  </header>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer" style="padding:18px 0;text-align:center">
@@ -214,6 +176,7 @@
   </footer>
 
 <style>
+    .hero .marquee:before,.hero .marquee:after{background:none!important}
     cakto-upsell-buttons{display:flex;flex-direction:column;gap:10px;width:100%;margin:6px 0 10px}
     cakto-upsell-accept,cakto-upsell-reject{display:block;width:100%}
     cakto-upsell-accept::part(button){width:100%;font-weight:800;font-size:18px;padding:16px 20px;border-radius:12px;cursor:pointer}
