@@ -119,7 +119,24 @@
         <img src="/assets/img/questoes-100-mockup.webp" alt="100 Questões Comentadas de Contabilidade" width="640" height="640" fetchpriority="high">
       </div>
 
-      <a href="#" class="cta-primary" id="ctaCheckout">QUERO GARANTIR ESSA OFERTA ÚNICA</a>
+      <cakto-upsell-buttons>
+        <cakto-upsell-accept
+          bg-color="#0f7865"
+          text-color="#ffffff"
+          upsell-accept-url="members_area"
+          offer-id="ndgt5bj"
+          app-base-url="https://app.cakto.com.br"
+          offer-type="upsell"
+          upsell-reject-url="members_area"
+        >
+          QUERO GARANTIR ESSA OFERTA ÚNICA
+        </cakto-upsell-accept>
+        <cakto-upsell-reject
+          upsell-reject-url="members_area"
+        >
+          Não, eu não quero aproveitar a oferta
+        </cakto-upsell-reject>
+      </cakto-upsell-buttons>
 
       <div class="social-proof">
         <span>Para estudantes, concursandos e profissionais da contabilidade</span>
@@ -167,7 +184,24 @@
   <!-- ============ CTA FINAL ============ -->
   <section class="section" style="padding-top:8px;padding-bottom:36px">
     <div class="container narrow center">
-      <a href="#" class="cta-primary" id="ctaCheckout2">QUERO GARANTIR ESSA OFERTA ÚNICA</a>
+      <cakto-upsell-buttons>
+        <cakto-upsell-accept
+          bg-color="#0f7865"
+          text-color="#ffffff"
+          upsell-accept-url="members_area"
+          offer-id="ndgt5bj"
+          app-base-url="https://app.cakto.com.br"
+          offer-type="upsell"
+          upsell-reject-url="members_area"
+        >
+          QUERO GARANTIR ESSA OFERTA ÚNICA
+        </cakto-upsell-accept>
+        <cakto-upsell-reject
+          upsell-reject-url="members_area"
+        >
+          Não, eu não quero aproveitar a oferta
+        </cakto-upsell-reject>
+      </cakto-upsell-buttons>
       <p class="trust-row">🔒 Compra 100% segura · 7 dias de garantia · Acesso imediato</p>
     </div>
   </section>
@@ -179,6 +213,13 @@
     </div>
   </footer>
 
+<style>
+    cakto-upsell-buttons{display:flex;flex-direction:column;gap:10px;width:100%;margin:6px 0 10px}
+    cakto-upsell-accept,cakto-upsell-reject{display:block;width:100%}
+    cakto-upsell-accept::part(button){width:100%;font-weight:800;font-size:18px;padding:16px 20px;border-radius:12px;cursor:pointer}
+    cakto-upsell-reject::part(button){width:100%;background:transparent;color:#64748b;font-size:14px;text-decoration:underline;border:0;cursor:pointer}
+  </style>
+<script type="text/javascript" src="https://caktoscripts.nyc3.cdn.digitaloceanspaces.com/upsell.js"></script>
 <script>
 /* Protecao basica: bloqueia botao direito, atalhos de copiar/inspecionar e arrastar imagens */
 (function(){
