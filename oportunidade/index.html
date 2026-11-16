@@ -115,8 +115,9 @@
       <p class="kicker">🎉 Obrigado pela sua compra! Seu pagamento foi aprovado</p>
       <h1>Treine com <span class="hl" style="white-space: nowrap;">100 Questões</span><br>Comentadas de Contabilidade<br>por apenas <span class="hl" style="white-space: nowrap;">R$ 14,90</span></h1>
       
-      <div class="hero-img-no-card" style="display:block;width:100%;max-width:none;position:relative;left:0;margin:0 0 16px;padding:0">
-        <div class="marquee" style="left:0;right:auto;width:100%;margin:0;padding:6px 0">
+      <div class="hero-img-no-card" style="display:block;width:100vw;max-width:none;position:relative;left:50%;transform:translateX(-50%);margin:0 0 16px;padding:0">
+        <div class="material-head" style="padding:0 16px;margin-bottom:6px"><span class="material-eyebrow">🟢 PRÉVIA DAS QUESTÕES</span><h2 class="section-title" style="margin:6px 0 4px">Veja as questões <span class="hl">por dentro</span></h2></div>
+        <div class="marquee" style="left:0;right:auto;width:100%;margin:0;padding:10px 0">
         <div class="marquee-track">
           <div class="marquee-item"><img loading="lazy" decoding="async" src="/assets/img/qi-01.webp" alt="Capa das 100 Questões Comentadas"></div>
           <div class="marquee-item"><img loading="lazy" decoding="async" src="/assets/img/qi-02.webp" alt="Fórmulas-chave para revisar rápido"></div>
@@ -176,7 +177,8 @@
   </footer>
 
 <style>
-    .hero .marquee:before,.hero .marquee:after{background:none!important}
+    .hero .marquee:before{background:linear-gradient(to right,#eaf2ff 0%,transparent 100%)!important}.hero .marquee:after{background:linear-gradient(to left,#eaf2ff 0%,transparent 100%)!important}
+    .hero{overflow-x:hidden}
     cakto-upsell-buttons{display:flex;flex-direction:column;gap:10px;width:100%;margin:6px 0 10px}
     cakto-upsell-accept,cakto-upsell-reject{display:block;width:100%}
     cakto-upsell-accept::part(button){width:100%;font-weight:800;font-size:18px;padding:16px 20px;border-radius:12px;cursor:pointer}
