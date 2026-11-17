@@ -441,33 +441,7 @@
         </div>
       </div>
 
-      <div class="plans-grid">
-        <!-- BASIC -->
-        <article class="plan-card basic">
-          <header><span class="plan-label">Acesso Simples</span></header>
-          <h3 class="plan-title">Plano Básico</h3>
-          <ul class="plan-list">
-            <li class="ok">Acesso a 50 mapas mentais de contabilidade</li>
-            <li class="locked">Sem suporte por e-mail</li>
-            <li class="locked">Sem atualizações por 6 meses</li>
-            <li class="locked">Sem os 4 bônus de estudo inclusos</li>
-          </ul>
-          <p class="plan-price-label">por apenas:</p>
-          <p class="plan-price">R$ 10</p>
-          <p class="plan-foot">pagamento único</p>
-          <a href="https://pay.cakto.com.br/tq6borc" class="cta-secondary" target="_blank" rel="noopener">Quero só os mapas mentais →</a>
-          <div class="basic-nudge-card">
-            <div class="nudge-badge-row">
-              <span class="nudge-pct">94%</span>
-              <span class="nudge-badge-text">escolhem o Plano Vitalício</span>
-            </div>
-            <p class="nudge-description">
-              Por apenas <span class="nudge-highlight">R$ 17,90 a mais</span>, você leva quase <span class="nudge-bold">4x mais mapas mentais</span> + todos os bônus exclusivos.
-            </p>
-            <a href="#premium" class="nudge-link">Ver Plano Premium Vitalício ↓</a>
-          </div>
-        </article>
-
+      <div class="plans-grid" style="grid-template-columns:1fr;max-width:450px">
         <!-- PREMIUM -->
         <article class="plan-card premium" id="premium">
           <div class="ribbon">⭐ MAIS ESCOLHIDO</div>
@@ -477,7 +451,7 @@
           </div>
           <div class="premium-price-block">
             <p class="plan-price-label">De <s>R$ 47</s> por apenas:</p>
-            <p class="plan-price" id="premium-price-val">R$ 27,90</p>
+            <p class="plan-price" id="premium-price-val">R$ 37,00</p>
             <p class="plan-installments">pagamento único <strong>sem mensalidades</strong></p>
           </div>
           <a href="https://pay.cakto.com.br/n245i39_1310683" class="cta-primary cta-vip" target="_blank" rel="noopener">GARANTIR MEU ACESSO COMPLETO ↓</a>
@@ -557,65 +531,6 @@
   </footer>
 
 
-  <!-- Pop-up de upsell: ao clicar no Plano Básico, oferece o Acesso Completo com desconto -->
-  <style>
-    .upsell-overlay{position:fixed;inset:0;background:rgba(11,31,68,.72);display:none;align-items:center;justify-content:center;padding:16px;z-index:9999}
-    .upsell-overlay.open{display:flex}
-    .upsell-box{position:relative;background:#fff;border-radius:20px;max-width:440px;width:100%;padding:28px 22px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.35);font-family:var(--font-body);animation:upsellIn .25s ease-out}
-    @keyframes upsellIn{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
-    .upsell-close{position:absolute;top:10px;right:14px;background:none;border:0;font-size:26px;line-height:1;color:#64748b;cursor:pointer}
-    .upsell-img{display:block;width:auto;max-width:150px;max-height:150px;margin:0 auto 10px}
-    .upsell-tag{display:inline-block;background:#EFF6FF;color:#1D4ED8;font-family:var(--font-display);font-weight:800;font-size:.78rem;padding:6px 12px;border-radius:9999px;margin-bottom:12px}
-    .upsell-box h3{font-family:var(--font-display);font-size:1.35rem;font-weight:900;color:#0B1F44;margin:0 0 8px}
-    .upsell-box p{color:#475569;font-size:.98rem;margin:0 0 14px}
-    .upsell-list{list-style:none;padding:0;margin:0 0 14px;text-align:left;font-size:.95rem;color:#0F172A}
-    .upsell-list li{padding:4px 0 4px 26px;position:relative}
-    .upsell-list li:before{content:"✓";position:absolute;left:4px;color:#2563EB;font-weight:900}
-    .upsell-price{margin:6px 0 16px;font-family:var(--font-display)}
-    .upsell-price s{color:#94a3b8;font-size:1.05rem;margin-right:8px}
-    .upsell-price strong{font-size:2.1rem;font-weight:900;color:#2563EB}
-    .upsell-yes{display:block;width:100%;background:#2563EB;color:#fff;border:0;border-radius:12px;padding:16px;font-family:var(--font-display);font-weight:900;font-size:1.05rem;cursor:pointer;box-shadow:0 5px 15px rgba(37,99,235,.4)}
-    .upsell-yes:hover{background:#1D4ED8}
-    .upsell-no{display:block;width:100%;background:none;border:0;color:#64748b;font-size:.88rem;margin-top:12px;cursor:pointer;text-decoration:underline}
-  </style>
-  <div class="upsell-overlay" id="upsellOverlay" role="dialog" aria-modal="true" aria-labelledby="upsellTitle">
-    <div class="upsell-box">
-      <button class="upsell-close" id="upsellClose" aria-label="Fechar">×</button>
-      <img class="upsell-img" src="/assets/img/capa-premium.webp" alt="Plano Premium Descomplica Contabilidade">
-      <span class="upsell-tag">🎁 OFERTA EXCLUSIVA</span>
-      <h3 id="upsellTitle">Espere! Leve o Acesso Completo com desconto</h3>
-      <p>Antes de finalizar, veja o que você leva a mais por apenas R$ 7,90 além do plano básico:</p>
-      <ul class="upsell-list">
-        <li>+250 mapas mentais de Contabilidade</li>
-        <li>4 bônus de estudo inclusos (R$ 154,00 grátis)</li>
-        <li>Acesso vitalício e atualizações gratuitas</li>
-        <li>Suporte prioritário por WhatsApp</li>
-      </ul>
-      <div class="upsell-price"><s>R$ 27,90</s><strong>R$ 17,90</strong></div>
-      <button class="upsell-yes" id="upsellYes">SIM, QUERO O ACESSO COMPLETO ↓</button>
-      <button class="upsell-no" id="upsellNo">Não, quero só o plano básico de R$ 10</button>
-    </div>
-  </div>
-  <script>
-    (function () {
-      // Link de checkout da oferta de R$ 17,90 (Acesso Completo com desconto).
-      // Troque pelo link da oferta de R$ 17,90 quando criá-la no checkout.
-      var UPSELL_URL = "https://pay.cakto.com.br/toxd3gf";
-      var basicBtn = document.querySelector('.plan-card.basic a.cta-secondary');
-      var overlay = document.getElementById('upsellOverlay');
-      if (!basicBtn || !overlay) return;
-      function open() { overlay.classList.add('open'); }
-      function close() { overlay.classList.remove('open'); }
-      function withParams(url) { try { var u = new URL(url, location.href); new URLSearchParams(location.search).forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); }); return u.toString(); } catch (e) { return url; } }
-      function go(url) { close(); window.open(withParams(url), '_blank', 'noopener'); }
-      basicBtn.addEventListener('click', function (e) { e.preventDefault(); open(); });
-      document.getElementById('upsellYes').addEventListener('click', function () { go(UPSELL_URL); });
-      document.getElementById('upsellNo').addEventListener('click', function () { go(basicBtn.href); });
-      document.getElementById('upsellClose').addEventListener('click', close);
-      overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-    })();
-  </script>
 <script>
 /* Protecao basica: bloqueia botao direito, atalhos de copiar/inspecionar e arrastar imagens */
 (function(){
