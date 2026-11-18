@@ -574,5 +574,21 @@
   });
 })();
 </script>
+<script>
+/* Rolagem confiavel ate a oferta: corrige o destino se imagens carregarem durante a rolagem */
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href="#pricing"],a[href="#recebe"]');
+    if(!a)return;
+    var el=document.getElementById(a.getAttribute('href').slice(1));
+    if(!el)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    function top(){return el.getBoundingClientRect().top}
+    function fix(){var t=top();if(Math.abs(t)>3)window.scrollBy({top:t,behavior:'auto'})}
+    window.scrollBy({top:top(),behavior:'smooth'});
+    [900,1700,2600].forEach(function(ms){setTimeout(fix,ms)});
+  },true);
+})();
+</script>
 </body>
 </html>
